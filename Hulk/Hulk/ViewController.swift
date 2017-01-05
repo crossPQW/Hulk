@@ -27,7 +27,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 60
         tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
@@ -51,6 +50,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     //MARK:- UITableViewDelegate & UITableViewDataSource
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return magnets.count
     }

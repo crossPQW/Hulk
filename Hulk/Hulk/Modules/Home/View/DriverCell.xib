@@ -18,30 +18,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcv-ph-N2A">
-                        <rect key="frame" x="10" y="39" width="35.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKY-6t-Ghv">
+                        <rect key="frame" x="10" y="10" width="300" height="46.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKY-6t-Ghv">
-                        <rect key="frame" x="139" y="10" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="dcv-ph-N2A" secondAttribute="bottom" constant="10" id="8zr-Ms-HFn"/>
-                    <constraint firstItem="bKY-6t-Ghv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="HHQ-Oh-vxw"/>
-                    <constraint firstItem="bKY-6t-Ghv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="X6z-E2-bXt"/>
+                    <constraint firstAttribute="bottom" secondItem="bKY-6t-Ghv" secondAttribute="bottom" constant="10" id="9ts-RM-Jsk"/>
+                    <constraint firstItem="bKY-6t-Ghv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CMz-TJ-UTi"/>
+                    <constraint firstAttribute="trailing" secondItem="bKY-6t-Ghv" secondAttribute="trailing" constant="10" id="ECe-Kh-BGP"/>
+                    <constraint firstItem="bKY-6t-Ghv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lzh-qu-S5n"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="magnets" destination="dcv-ph-N2A" id="gmm-jK-Veu"/>
                 <outlet property="title" destination="bKY-6t-Ghv" id="iUa-0L-Vys"/>
             </connections>
-            <point key="canvasLocation" x="-415" y="-56"/>
+            <point key="canvasLocation" x="-782" y="-100"/>
         </tableViewCell>
     </objects>
 </document>

@@ -16,7 +16,6 @@ struct Torrent {
 class DriverCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var magnets: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
