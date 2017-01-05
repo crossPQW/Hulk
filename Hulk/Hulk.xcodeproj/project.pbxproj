@@ -14,6 +14,8 @@
 		380145671E1DFD34003DDB63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380145651E1DFD34003DDB63 /* LaunchScreen.storyboard */; };
 		380145721E1DFD34003DDB63 /* HulkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380145711E1DFD34003DDB63 /* HulkTests.swift */; };
 		3801457D1E1DFD34003DDB63 /* HulkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801457C1E1DFD34003DDB63 /* HulkUITests.swift */; };
+		380145951E1E01D8003DDB63 /* DriverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380145931E1E01D8003DDB63 /* DriverCell.swift */; };
+		380145961E1E01D8003DDB63 /* DriverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380145941E1E01D8003DDB63 /* DriverCell.xib */; };
 		4DFC8B16457CDE50C3485B55 /* Pods_HulkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480BF44B1E5732998722EAC1 /* Pods_HulkTests.framework */; };
 		DE6CBC46DDE2D8AF169B5C38 /* Pods_Hulk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D173B53693BD8434FAF85E25 /* Pods_Hulk.framework */; };
 		F5542F6E19EE1C127DBC840D /* Pods_HulkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8D59644A65100AD8C11A22 /* Pods_HulkUITests.framework */; };
@@ -40,7 +42,7 @@
 		23A1CF4EE48BDB39EFED6315 /* Pods-Hulk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hulk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hulk/Pods-Hulk.release.xcconfig"; sourceTree = "<group>"; };
 		380145591E1DFD34003DDB63 /* Hulk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hulk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3801455C1E1DFD34003DDB63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3801455E1E1DFD34003DDB63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3801455E1E1DFD34003DDB63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../ViewController.swift; sourceTree = "<group>"; };
 		380145611E1DFD34003DDB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		380145631E1DFD34003DDB63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380145661E1DFD34003DDB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		380145781E1DFD34003DDB63 /* HulkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HulkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3801457C1E1DFD34003DDB63 /* HulkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HulkUITests.swift; sourceTree = "<group>"; };
 		3801457E1E1DFD34003DDB63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380145931E1E01D8003DDB63 /* DriverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverCell.swift; sourceTree = "<group>"; };
+		380145941E1E01D8003DDB63 /* DriverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverCell.xib; sourceTree = "<group>"; };
 		480BF44B1E5732998722EAC1 /* Pods_HulkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HulkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69ED40EF04C228C73BBFE606 /* Pods-HulkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HulkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HulkUITests/Pods-HulkUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B8D59644A65100AD8C11A22 /* Pods_HulkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HulkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +147,6 @@
 				3801458D1E1DFFA6003DDB63 /* Utils */,
 				3801458E1E1DFFA6003DDB63 /* Vendor */,
 				3801455C1E1DFD34003DDB63 /* AppDelegate.swift */,
-				3801455E1E1DFD34003DDB63 /* ViewController.swift */,
 				380145601E1DFD34003DDB63 /* Main.storyboard */,
 				380145631E1DFD34003DDB63 /* Assets.xcassets */,
 				380145651E1DFD34003DDB63 /* LaunchScreen.storyboard */,
@@ -226,6 +229,8 @@
 		380145911E1DFFDF003DDB63 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				380145931E1E01D8003DDB63 /* DriverCell.swift */,
+				380145941E1E01D8003DDB63 /* DriverCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 		380145921E1DFFDF003DDB63 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3801455E1E1DFD34003DDB63 /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				380145671E1DFD34003DDB63 /* LaunchScreen.storyboard in Resources */,
 				380145641E1DFD34003DDB63 /* Assets.xcassets in Resources */,
 				380145621E1DFD34003DDB63 /* Main.storyboard in Resources */,
+				380145961E1E01D8003DDB63 /* DriverCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3801455F1E1DFD34003DDB63 /* ViewController.swift in Sources */,
+				380145951E1E01D8003DDB63 /* DriverCell.swift in Sources */,
 				3801455D1E1DFD34003DDB63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
