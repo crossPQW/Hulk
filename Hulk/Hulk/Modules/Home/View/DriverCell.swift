@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct Torrent {
-    let title: String
-    let magnets: Array<String>
-}
-
 class DriverCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!

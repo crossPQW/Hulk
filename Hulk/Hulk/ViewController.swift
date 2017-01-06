@@ -16,13 +16,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var tableView :UITableView!
     var magnets : Array<Torrent> = []
     
+    //Mark:- Services
+    private var apiServer: TorrentApiProtocol = TorrentApi()
+    
     //MARK:- lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
         fetchData()
     }
-
     func setupSubviews()  {
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.delegate = self
@@ -35,21 +37,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func fetchData() {
-        Alamofire.request("https://raw.githubusercontent.com/Chion82/hello-old-driver/master/resource_list.json").responseJSON { (response) in
-            var tempArray: Array<Dictionary<String, Any>> = []
-            if let JSON = response.result.value {
-                tempArray = JSON as! Array
-                for item  in tempArray {
-                    let dic = item 
-                    let title = dic["title"]
-                    let torrentStrings:Array<String> = dic["magnets"] as! Array<String>
-                    
-                    let torrent = Torrent(title: title as! String, magnets: torrentStrings)
-
-                    self.magnets.append(torrent)
-                }
-                self.tableView.reloadData()
-            }
+        apiServer.fetchResources { (torrents, error) in
+            self.magnets = torrents!
+            self.tableView.reloadData()
         }
     }
     
