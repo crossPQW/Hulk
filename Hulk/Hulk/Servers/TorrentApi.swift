@@ -21,7 +21,7 @@ class TorrentApi: TorrentApiProtocol {
             
             if let JSON = response.result.value {
                 tempArray = JSON as! Array
-                for item in tempArray {
+                for (index, item) in tempArray.enumerated() {
                     let dic = item
                     let title = dic["title"]
                     let torrentStrings:Array<String> = dic["magnets"] as! Array<String>
@@ -29,6 +29,7 @@ class TorrentApi: TorrentApiProtocol {
                     //create Resources
                     let resource = Resources()
                     resource.title = title as! String
+                    resource.ID = String(index)
                     for tor in torrentStrings {
                         let torrent = Torrent()
                         torrent.torrent = tor

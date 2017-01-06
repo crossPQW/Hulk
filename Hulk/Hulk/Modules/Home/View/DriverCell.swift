@@ -11,6 +11,7 @@ import UIKit
 class DriverCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
+    let resource: Resources = Resources()
     
     override func awakeFromNib() {
         super.awakeFromNib()

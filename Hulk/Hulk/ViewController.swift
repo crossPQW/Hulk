@@ -9,12 +9,13 @@
 import UIKit
 import SnapKit
 import Alamofire
+import RealmSwift
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     let cellID = "DriverCell"
     var tableView :UITableView!
-    var magnets : Array<Resources> = []
+    var magnets : Results<Resources>? = nil
     
     //Mark:- Services
     private var apiServer: TorrentApiProtocol = TorrentApi()
@@ -37,10 +38,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func fetchData() {
-        apiServer.fetchResources { (torrents, error) in
-            self.magnets = torrents!
-            self.tableView.reloadData()
+        apiServer.fetchResources { (resources, error) in
+            
         }
+        
+        let realm = try! Realm()
+        magnets = realm.objects(Resources.self)
+        tableView.reloadData()
     }
     
     //MARK:- UITableViewDelegate & UITableViewDataSource
@@ -53,13 +57,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return magnets.count
+        return magnets!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DriverCell
-        let torrent = magnets[indexPath.row]
-        cell.title.text = torrent.title
+        let resource = magnets?[indexPath.row]
+        cell.title.text = resource?.title
         
         return cell
     }

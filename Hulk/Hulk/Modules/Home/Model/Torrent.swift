@@ -15,6 +15,15 @@ class Torrent: Object {
 }
 
 class Resources: Object {
+    dynamic var ID = ""
     dynamic var title: String = ""
     let magnets = List<Torrent>()
+    
+    override static func indexedProperties() -> [String] {
+        return ["ID"]
+    }
+    
+    override static func primaryKey() -> String? {
+        return "ID"
+    }
 }
