@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     let cellID = "DriverCell"
     var tableView :UITableView!
-    var magnets : Array<String> = []
+    var magnets : Array<Torrent> = []
     
     //MARK:- lifeCycle
     override func viewDidLoad() {
@@ -41,8 +41,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 tempArray = JSON as! Array
                 for item  in tempArray {
                     let dic = item 
-                    let string = dic["title"]
-                    self.magnets.append(string! as! String)
+                    let title = dic["title"]
+                    let torrentStrings:Array<String> = dic["magnets"] as! Array<String>
+                    
+                    let torrent = Torrent(title: title as! String, magnets: torrentStrings)
+
+                    self.magnets.append(torrent)
                 }
                 self.tableView.reloadData()
             }
@@ -64,7 +68,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DriverCell
-        cell.title.text = magnets[indexPath.row]
+        let torrent = magnets[indexPath.row]
+        cell.title.text = torrent.title
         
         return cell
     }

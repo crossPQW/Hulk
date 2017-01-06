@@ -10,7 +10,7 @@ import UIKit
 
 struct Torrent {
     let title: String
-    let magnets: String
+    let magnets: Array<String>
 }
 
 class DriverCell: UITableViewCell {
