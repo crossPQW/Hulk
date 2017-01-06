@@ -19,6 +19,12 @@ class TorrentApi: TorrentApiProtocol {
         Alamofire.request(url).responseJSON { (response) in
             var tempArray: Array<Dictionary<String, Any>> = []
             
+            let realm = try! Realm()
+            //先清空数据
+            try! realm.write {
+                realm.deleteAll()
+            }
+            
             if let JSON = response.result.value {
                 tempArray = JSON as! Array
                 for (index, item) in tempArray.enumerated() {
@@ -26,11 +32,7 @@ class TorrentApi: TorrentApiProtocol {
                     let title = dic["title"]
                     let torrentStrings:Array<String> = dic["magnets"] as! Array<String>
                     
-                    let realm = try! Realm()
-                    //先清空数据
-                    try! realm.write {
-                        realm.deleteAll()
-                    }
+                    
                     
                     //create Resources
                     let resource = Resources()
