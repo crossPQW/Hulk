@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias TorrentCompletionHandler = (Array<Torrent>?, Error?) -> Void
+typealias TorrentCompletionHandler = (Array<Resources>?, Error?) -> Void
 
 protocol TorrentApiProtocol {
     func fetchResources(completionHandler: @escaping TorrentCompletionHandler)

@@ -10,14 +10,14 @@ import Foundation
 import Alamofire
 import RealmSwift
 
-struct TorrentApi: TorrentApiProtocol {
+class TorrentApi: TorrentApiProtocol {
     private let url = "https://raw.githubusercontent.com/Chion82/hello-old-driver/master/resource_list.json"
     
-    func fetchResources(completionHandler : @escaping TorrentCompletionHandler) {
+    func fetchResources(completionHandler: @escaping TorrentCompletionHandler) {
         
-        var result = Array<Torrent>()
+        var result = Array<Resources>()
         Alamofire.request(url).responseJSON { (response) in
-            var tempArray : Array<Dictionary<String, Any>> = []
+            var tempArray: Array<Dictionary<String, Any>> = []
             
             if let JSON = response.result.value {
                 tempArray = JSON as! Array
@@ -26,11 +26,28 @@ struct TorrentApi: TorrentApiProtocol {
                     let title = dic["title"]
                     let torrentStrings:Array<String> = dic["magnets"] as! Array<String>
                     
-                    let torrent = Torrent(title : title as! String, magnets : torrentStrings)
-                    result.append(torrent)
+                    //create Resources
+                    let resource = Resources()
+                    resource.title = title as! String
+                    for tor in torrentStrings {
+                        let torrent = Torrent()
+                        torrent.torrent = tor
+                        torrent.owner = resource
+                        resource.magnets.append(torrent)
+                    }
+                    
+                    result.append(resource)
+                    
+                    let realm = try! Realm()
+                    try! realm.write {
+                        realm.add(resource)
+                    }
                 }
             }
-            completionHandler(result, response.result.error)
+            
+            if response.result.isSuccess {
+                completionHandler(result, response.result.error)
+            }
         }
     }
 }

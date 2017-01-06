@@ -7,8 +7,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Torrent {
-    let title: String
-    let magnets: Array<String>
+class Torrent: Object {
+    dynamic var torrent: String = ""
+    dynamic var owner: Resources? = nil
+}
+
+class Resources: Object {
+    dynamic var title: String = ""
+    let magnets = List<Torrent>()
 }

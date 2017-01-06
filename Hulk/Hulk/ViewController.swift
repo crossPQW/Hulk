@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     let cellID = "DriverCell"
     var tableView :UITableView!
-    var magnets : Array<Torrent> = []
+    var magnets : Array<Resources> = []
     
     //Mark:- Services
     private var apiServer: TorrentApiProtocol = TorrentApi()
