@@ -26,6 +26,12 @@ class TorrentApi: TorrentApiProtocol {
                     let title = dic["title"]
                     let torrentStrings:Array<String> = dic["magnets"] as! Array<String>
                     
+                    let realm = try! Realm()
+                    //先清空数据
+                    try! realm.write {
+                        realm.deleteAll()
+                    }
+                    
                     //create Resources
                     let resource = Resources()
                     resource.title = title as! String
@@ -37,12 +43,11 @@ class TorrentApi: TorrentApiProtocol {
                         resource.magnets.append(torrent)
                     }
                     
-                    result.append(resource)
-                    
-                    let realm = try! Realm()
                     try! realm.write {
                         realm.add(resource)
                     }
+                    
+                    result.append(resource)
                 }
             }
             
