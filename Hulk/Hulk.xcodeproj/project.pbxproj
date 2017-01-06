@@ -20,6 +20,7 @@
 		382C90791E1F4AFF0010170E /* Torrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C90781E1F4AFF0010170E /* Torrent.swift */; };
 		382C907B1E1F4F850010170E /* TorrentApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C907A1E1F4F850010170E /* TorrentApiProtocol.swift */; };
 		3847CB781E1FC8D2001AE1CD /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847CB771E1FC8D2001AE1CD /* BaseNavigationController.swift */; };
+		3895EAA11E1FCB0000C3D8C3 /* TorrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895EAA01E1FCB0000C3D8C3 /* TorrentViewController.swift */; };
 		83A26495BE47DF1F335046D0 /* Pods_HulkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06288769A2814D189A22B89F /* Pods_HulkUITests.framework */; };
 		CB542FE55C8B491FF35EB60A /* Pods_HulkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5507F50ABDA0DB408EFA3AEA /* Pods_HulkTests.framework */; };
 		E444F115ED33CB54DB6B49D0 /* Pods_Hulk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C700A478CE90E9B5BC6C35E8 /* Pods_Hulk.framework */; };
@@ -64,6 +65,7 @@
 		382C90781E1F4AFF0010170E /* Torrent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
 		382C907A1E1F4F850010170E /* TorrentApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentApiProtocol.swift; sourceTree = "<group>"; };
 		3847CB771E1FC8D2001AE1CD /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		3895EAA01E1FCB0000C3D8C3 /* TorrentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentViewController.swift; sourceTree = "<group>"; };
 		52B4A7797BBA0535A62A7BF5 /* Pods-Hulk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hulk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hulk/Pods-Hulk.release.xcconfig"; sourceTree = "<group>"; };
 		5507F50ABDA0DB408EFA3AEA /* Pods_HulkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HulkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757A03F2B1D74FE297A0AD19 /* Pods-HulkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HulkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HulkUITests/Pods-HulkUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				3801455E1E1DFD34003DDB63 /* ViewController.swift */,
+				3895EAA01E1FCB0000C3D8C3 /* TorrentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				3801455F1E1DFD34003DDB63 /* ViewController.swift in Sources */,
 				3847CB781E1FC8D2001AE1CD /* BaseNavigationController.swift in Sources */,
 				380145951E1E01D8003DDB63 /* DriverCell.swift in Sources */,
+				3895EAA11E1FCB0000C3D8C3 /* TorrentViewController.swift in Sources */,
 				3801455D1E1DFD34003DDB63 /* AppDelegate.swift in Sources */,
 				382C90771E1F49B20010170E /* TorrentApi.swift in Sources */,
 				382C90791E1F4AFF0010170E /* Torrent.swift in Sources */,
