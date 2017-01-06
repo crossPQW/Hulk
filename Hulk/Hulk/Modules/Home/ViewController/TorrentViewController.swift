@@ -8,12 +8,14 @@
 
 import UIKit
 
-class TorrentViewController: UIViewController {
+class TorrentViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "啊哈哈"
+        view.backgroundColor = UIColor.lightGray
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,7 +15,6 @@ class BaseNavigationController: UINavigationController {
 
         // Do any additional setup after loading the view.
         
-        navigationBar.barStyle = UIBarStyle.black
     }
 
     

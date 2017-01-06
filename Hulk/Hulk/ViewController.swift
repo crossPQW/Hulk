@@ -11,7 +11,7 @@ import SnapKit
 import Alamofire
 import RealmSwift
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
 
     let cellID = "DriverCell"
     var tableView :UITableView!
@@ -27,6 +27,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         fetchData()
     }
     func setupSubviews()  {
+        title = "你妈嗨"
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
@@ -66,6 +67,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.title.text = resource?.title
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tVc = TorrentViewController()
+        navigationController?.pushViewController(tVc, animated: true)
     }
 }
 
