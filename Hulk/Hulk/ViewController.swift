@@ -15,10 +15,15 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
 
     private let cellID = "DriverCell"
     var tableView :UITableView!
-    var magnets : Results<Resources>? = nil
+    var magnets :Results<Resources>? = nil
+    var magnetsList :Array<Any>? = []
+    static let number = 20
+    private var page = 0
     
     //Mark:- Services
     private var apiServer: TorrentApiProtocol = TorrentApi()
+    
+    var refreshControl = UIRefreshControl()
     
     //MARK:- lifeCycle
     override func viewDidLoad() {
@@ -26,6 +31,7 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         setupSubviews()
         fetchData()
     }
+    
     func setupSubviews()  {
         title = "老司机"
         tableView = UITableView(frame: view.bounds, style: .plain)
@@ -33,17 +39,23 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         tableView.dataSource = self
         tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
         tableView.separatorStyle = .none
+        tableView.refreshControl = refreshControl
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
         }
+        
+        refreshControl.backgroundColor = UIColor.white
+        refreshControl.addTarget(self, action: #selector(didLoad), for: .valueChanged)
+        let attr = [NSForegroundColorAttributeName: UIColor.black]
+        refreshControl.attributedTitle = NSAttributedString(string: "updated on \(NSDate())", attributes: attr)
+        refreshControl.tintColor = UIColor.lightGray
     }
     
     func fetchData() {
         
         let realm = try! Realm()
         magnets = realm.objects(Resources.self)
-        
         if (magnets?.count)! > 0 {
             tableView.reloadData()
         }else {
@@ -52,7 +64,11 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
                 self.tableView.reloadData()
             }
         }
-        
+    }
+    
+    func didLoad()  {
+        print("load")
+        refreshControl.endRefreshing()
     }
     
     //MARK:- UITableViewDelegate & UITableViewDataSource

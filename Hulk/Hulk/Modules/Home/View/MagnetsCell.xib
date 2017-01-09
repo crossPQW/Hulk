@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55t-jY-4bD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55t-jY-4bD">
                         <rect key="frame" x="10" y="10" width="300" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
@@ -26,16 +26,16 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="55t-jY-4bD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ox8-gm-9Xi"/>
-                    <constraint firstAttribute="trailing" secondItem="55t-jY-4bD" secondAttribute="trailing" constant="10" id="ZYP-J0-QPD"/>
-                    <constraint firstItem="55t-jY-4bD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="h0f-Q4-L5X"/>
-                    <constraint firstAttribute="bottom" secondItem="55t-jY-4bD" secondAttribute="bottom" constant="10" id="se9-TY-oXX"/>
+                    <constraint firstAttribute="bottom" secondItem="55t-jY-4bD" secondAttribute="bottom" constant="10" id="CdT-fn-MPc"/>
+                    <constraint firstAttribute="trailing" secondItem="55t-jY-4bD" secondAttribute="trailing" constant="10" id="GXS-hv-irF"/>
+                    <constraint firstItem="55t-jY-4bD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="elW-An-Hs7"/>
+                    <constraint firstItem="55t-jY-4bD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zli-y9-g4E"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="magnets" destination="55t-jY-4bD" id="jAe-Qe-0kd"/>
             </connections>
-            <point key="canvasLocation" x="-155" y="-21"/>
+            <point key="canvasLocation" x="-183" y="-22"/>
         </tableViewCell>
     </objects>
 </document>

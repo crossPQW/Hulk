@@ -43,6 +43,8 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
         if navigationController.isNavigationBarHidden {
             navigationController.setNavigationBarHidden(false, animated: animatedOnNavigationBar)
         }
+        
+        //自定义返回按钮
         if navigationController.viewControllers.count > 1 {
             
             let backBtn = UIButton(frame: CGRect(x: 1, y: 1, width: 20, height: 20))
@@ -54,6 +56,8 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
             spaceitem.width = -10
             navigationItem.leftBarButtonItems = [spaceitem, backItem]
         }
+        
+        //左滑手势
         navigationController.interactivePopGestureRecognizer?.delegate = self
     }
     
@@ -63,5 +67,9 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
     
     func back() {
         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }

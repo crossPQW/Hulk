@@ -22,7 +22,7 @@ class TorrentViewController: BaseViewController,UITableViewDelegate,UITableViewD
     }
 
     func setupSubveiw() {
-        title = resource.title
+        title = "全特么是种子"
         tableview = UITableView(frame: CGRect.zero, style: .plain)
         tableview.delegate = self
         tableview.dataSource = self
