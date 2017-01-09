@@ -13,7 +13,7 @@ import RealmSwift
 
 class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
 
-    let cellID = "DriverCell"
+    private let cellID = "DriverCell"
     var tableView :UITableView!
     var magnets : Results<Resources>? = nil
     
@@ -27,11 +27,12 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         fetchData()
     }
     func setupSubviews()  {
-        title = "你妈嗨"
+        title = "老司机"
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
+        tableView.separatorStyle = .none
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
@@ -39,13 +40,19 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func fetchData() {
-        apiServer.fetchResources { (resources, error) in
-            
-        }
         
         let realm = try! Realm()
         magnets = realm.objects(Resources.self)
-        tableView.reloadData()
+        
+        if (magnets?.count)! > 0 {
+            tableView.reloadData()
+        }else {
+            apiServer.fetchResources { (resources, error) in
+                self.magnets = realm.objects(Resources.self)
+                self.tableView.reloadData()
+            }
+        }
+        
     }
     
     //MARK:- UITableViewDelegate & UITableViewDataSource
@@ -71,6 +78,8 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tVc = TorrentViewController()
+        let resource = magnets?[indexPath.row]
+        tVc.resource = resource!
         navigationController?.pushViewController(tVc, animated: true)
     }
 }

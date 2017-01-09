@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
 
     var animatedOnNavigationBar = true
     
@@ -43,16 +43,25 @@ class BaseViewController: UIViewController {
         if navigationController.isNavigationBarHidden {
             navigationController.setNavigationBarHidden(false, animated: animatedOnNavigationBar)
         }
+        if navigationController.viewControllers.count > 1 {
+            
+            let backBtn = UIButton(frame: CGRect(x: 1, y: 1, width: 20, height: 20))
+            backBtn.setImage(UIImage(named: "left"), for: .normal)
+            backBtn.addTarget(self, action: #selector(back), for: .touchUpInside)
+            let backItem = UIBarButtonItem(customView: backBtn)
+            
+            let spaceitem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+            spaceitem.width = -10
+            navigationItem.leftBarButtonItems = [spaceitem, backItem]
+        }
+        navigationController.interactivePopGestureRecognizer?.delegate = self
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
-    */
-
+    
+    func back() {
+        _ = navigationController?.popViewController(animated: true)
+    }
 }

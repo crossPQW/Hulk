@@ -32,8 +32,6 @@ class TorrentApi: TorrentApiProtocol {
                     let title = dic["title"]
                     let torrentStrings:Array<String> = dic["magnets"] as! Array<String>
                     
-                    
-                    
                     //create Resources
                     let resource = Resources()
                     resource.title = title as! String
