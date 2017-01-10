@@ -16,9 +16,9 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
     private let cellID = "DriverCell"
     var tableView :UITableView!
     var magnets :Results<Resources>? = nil
-    var magnetsList :Array<Any>? = []
-    static let number = 20
-    private var page = 0
+    var magnetsList :Array<Resources>? = []
+    private let number = 20
+    private var currentPage = 0
     
     //Mark:- Services
     private var apiServer: TorrentApiProtocol = TorrentApi()
@@ -53,22 +53,32 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func fetchData() {
-        
         let realm = try! Realm()
         magnets = realm.objects(Resources.self)
         if (magnets?.count)! > 0 {
+            loadData(page: currentPage)
             tableView.reloadData()
         }else {
             apiServer.fetchResources { (resources, error) in
                 self.magnets = realm.objects(Resources.self)
+                self.loadData(page: self.currentPage)
                 self.tableView.reloadData()
             }
         }
     }
     
     func didLoad()  {
-        print("load")
+        loadData(page: currentPage)
+        currentPage = currentPage + 1
+        tableView.reloadData()
+        
         refreshControl.endRefreshing()
+    }
+    
+    func loadData(page: Int) {
+        for i in page*number ..< (page+1)*number {
+            magnetsList?.insert((magnets?[i])!, at: 0)
+        }
     }
     
     //MARK:- UITableViewDelegate & UITableViewDataSource
@@ -81,12 +91,12 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return magnets!.count
+        return magnetsList!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DriverCell
-        let resource = magnets?[indexPath.row]
+        let resource = magnetsList?[indexPath.row]
         cell.title.text = resource?.title
         
         return cell
@@ -94,7 +104,7 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tVc = TorrentViewController()
-        let resource = magnets?[indexPath.row]
+        let resource = magnetsList?[indexPath.row]
         tVc.resource = resource!
         navigationController?.pushViewController(tVc, animated: true)
     }
