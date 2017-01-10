@@ -97,7 +97,7 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DriverCell
         let resource = magnetsList?[indexPath.row]
-        cell.title.text = resource?.title
+        cell.resources = resource
         
         return cell
     }

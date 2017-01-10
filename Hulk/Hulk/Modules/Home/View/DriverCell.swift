@@ -10,8 +10,14 @@ import UIKit
 
 class DriverCell: UITableViewCell {
 
+    @IBOutlet weak var index: UILabel!
     @IBOutlet weak var title: UILabel!
-    let resource: Resources = Resources()
+    var resources :Resources! {
+        didSet {
+            index.text = resources.ID
+            title.text = resources.title
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
