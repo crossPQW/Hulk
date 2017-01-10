@@ -52,7 +52,7 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         refreshControl.tintColor = UIColor.lightGray
     }
     
-    func fetchData() {
+    private func fetchData() {
         let realm = try! Realm()
         magnets = realm.objects(Resources.self)
         if (magnets?.count)! > 0 {
@@ -75,8 +75,12 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         refreshControl.endRefreshing()
     }
     
-    func loadData(page: Int) {
+    
+    private func loadData(page: Int) {
         for i in page*number ..< (page+1)*number {
+            guard !(magnetsList?.contains((magnets?[i])!))! else {
+                return
+            }
             magnetsList?.insert((magnets?[i])!, at: 0)
         }
     }
