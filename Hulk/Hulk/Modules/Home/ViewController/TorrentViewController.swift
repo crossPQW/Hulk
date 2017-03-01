@@ -8,8 +8,10 @@
 
 import UIKit
 import SnapKit
+import Alamofire
+import Foundation
 
-class TorrentViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
+class TorrentViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,URLSessionDelegate {
 
     private let cellID = "MagnetsCell"
     var resource :Resources!
@@ -34,6 +36,15 @@ class TorrentViewController: BaseViewController,UITableViewDelegate,UITableViewD
         }
     }
     
+    func download(urlString: String) {
+        Alamofire.download(urlString).downloadProgress { (progress) in
+            print(progress)
+        }.responseData { (response) in
+            print("response.error = \(response)")
+        }
+        
+    }
+    
     //MARK: - UITableViewDelegate UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resource.magnets.count
@@ -52,5 +63,10 @@ class TorrentViewController: BaseViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let magnets = resource.magnets[indexPath.row]
+        download(urlString: magnets.torrent)
     }
 }
