@@ -1,4 +1,6 @@
 # Hulk
+![](https://github.com/crossPQW/Hulk/blob/master/ScreenShot/WechatIMG2.jpeg?raw=true)
+![](https://github.com/crossPQW/Hulk/blob/master/ScreenShot/WechatIMG3.jpeg?raw=true)
 Hulk 是我学习 Swift 随便瞎写的一个项目，API 来自`https://raw.githubusercontent.com/Chion82/hello-old-driver/master/resource_list.json`。
 #Why Hulk
 因为我是漫威迷啊，所以自建项目经常以超级英雄命名
