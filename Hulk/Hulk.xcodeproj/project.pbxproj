@@ -21,20 +21,6 @@
 		382C90791E1F4AFF0010170E /* Torrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C90781E1F4AFF0010170E /* Torrent.swift */; };
 		382C907B1E1F4F850010170E /* TorrentApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C907A1E1F4F850010170E /* TorrentApiProtocol.swift */; };
 		3847CB781E1FC8D2001AE1CD /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847CB771E1FC8D2001AE1CD /* BaseNavigationController.swift */; };
-		385C4D8B1E34C70F009F6E30 /* ConvertURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D6F1E34C70F009F6E30 /* ConvertURL.m */; };
-		385C4D8C1E34C70F009F6E30 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 385C4D701E34C70F009F6E30 /* InfoPlist.strings */; };
-		385C4D8D1E34C70F009F6E30 /* HYXunleiLixianAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D731E34C70F009F6E30 /* HYXunleiLixianAPI.m */; };
-		385C4D8E1E34C70F009F6E30 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D761E34C70F009F6E30 /* JSONKit.m */; };
-		385C4D8F1E34C70F009F6E30 /* Kuai.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D781E34C70F009F6E30 /* Kuai.m */; };
-		385C4D901E34C70F009F6E30 /* LCHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D7A1E34C70F009F6E30 /* LCHTTPConnection.m */; };
-		385C4D911E34C70F009F6E30 /* md5.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D7C1E34C70F009F6E30 /* md5.m */; };
-		385C4D921E34C70F009F6E30 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D7E1E34C70F009F6E30 /* NSData+Base64.m */; };
-		385C4D931E34C70F009F6E30 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D801E34C70F009F6E30 /* NSString+Base64.m */; };
-		385C4D941E34C70F009F6E30 /* NSString+RE.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D821E34C70F009F6E30 /* NSString+RE.m */; };
-		385C4D951E34C70F009F6E30 /* ParseElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D841E34C70F009F6E30 /* ParseElements.m */; };
-		385C4D961E34C70F009F6E30 /* TondarAPI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 385C4D851E34C70F009F6E30 /* TondarAPI-Info.plist */; };
-		385C4D971E34C70F009F6E30 /* URlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D881E34C70F009F6E30 /* URlEncode.m */; };
-		385C4D981E34C70F009F6E30 /* XunleiItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C4D8A1E34C70F009F6E30 /* XunleiItemInfo.m */; };
 		3895EAA11E1FCB0000C3D8C3 /* TorrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895EAA01E1FCB0000C3D8C3 /* TorrentViewController.swift */; };
 		38D869981E23884D00C42A35 /* MagnetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D869961E23884D00C42A35 /* MagnetsCell.swift */; };
 		38D869991E23884D00C42A35 /* MagnetsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D869971E23884D00C42A35 /* MagnetsCell.xib */; };
@@ -83,33 +69,6 @@
 		382C90781E1F4AFF0010170E /* Torrent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
 		382C907A1E1F4F850010170E /* TorrentApiProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentApiProtocol.swift; sourceTree = "<group>"; };
 		3847CB771E1FC8D2001AE1CD /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		385C4D6E1E34C70F009F6E30 /* ConvertURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertURL.h; sourceTree = "<group>"; };
-		385C4D6F1E34C70F009F6E30 /* ConvertURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertURL.m; sourceTree = "<group>"; };
-		385C4D711E34C70F009F6E30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		385C4D721E34C70F009F6E30 /* HYXunleiLixianAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYXunleiLixianAPI.h; sourceTree = "<group>"; };
-		385C4D731E34C70F009F6E30 /* HYXunleiLixianAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYXunleiLixianAPI.m; sourceTree = "<group>"; };
-		385C4D751E34C70F009F6E30 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		385C4D761E34C70F009F6E30 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		385C4D771E34C70F009F6E30 /* Kuai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kuai.h; sourceTree = "<group>"; };
-		385C4D781E34C70F009F6E30 /* Kuai.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kuai.m; sourceTree = "<group>"; };
-		385C4D791E34C70F009F6E30 /* LCHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCHTTPConnection.h; sourceTree = "<group>"; };
-		385C4D7A1E34C70F009F6E30 /* LCHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCHTTPConnection.m; sourceTree = "<group>"; };
-		385C4D7B1E34C70F009F6E30 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
-		385C4D7C1E34C70F009F6E30 /* md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = md5.m; sourceTree = "<group>"; };
-		385C4D7D1E34C70F009F6E30 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		385C4D7E1E34C70F009F6E30 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		385C4D7F1E34C70F009F6E30 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
-		385C4D801E34C70F009F6E30 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		385C4D811E34C70F009F6E30 /* NSString+RE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RE.h"; sourceTree = "<group>"; };
-		385C4D821E34C70F009F6E30 /* NSString+RE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RE.m"; sourceTree = "<group>"; };
-		385C4D831E34C70F009F6E30 /* ParseElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseElements.h; sourceTree = "<group>"; };
-		385C4D841E34C70F009F6E30 /* ParseElements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseElements.m; sourceTree = "<group>"; };
-		385C4D851E34C70F009F6E30 /* TondarAPI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TondarAPI-Info.plist"; sourceTree = "<group>"; };
-		385C4D861E34C70F009F6E30 /* TondarAPI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TondarAPI-Prefix.pch"; sourceTree = "<group>"; };
-		385C4D871E34C70F009F6E30 /* URlEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URlEncode.h; sourceTree = "<group>"; };
-		385C4D881E34C70F009F6E30 /* URlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URlEncode.m; sourceTree = "<group>"; };
-		385C4D891E34C70F009F6E30 /* XunleiItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XunleiItemInfo.h; sourceTree = "<group>"; };
-		385C4D8A1E34C70F009F6E30 /* XunleiItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XunleiItemInfo.m; sourceTree = "<group>"; };
 		3895EAA01E1FCB0000C3D8C3 /* TorrentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorrentViewController.swift; sourceTree = "<group>"; };
 		38D869961E23884D00C42A35 /* MagnetsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnetsCell.swift; sourceTree = "<group>"; };
 		38D869971E23884D00C42A35 /* MagnetsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MagnetsCell.xib; sourceTree = "<group>"; };
@@ -264,7 +223,6 @@
 		3801458E1E1DFFA6003DDB63 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				385C4D6D1E34C70F009F6E30 /* TondarAPI */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -323,48 +281,6 @@
 				3847CB771E1FC8D2001AE1CD /* BaseNavigationController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		385C4D6D1E34C70F009F6E30 /* TondarAPI */ = {
-			isa = PBXGroup;
-			children = (
-				385C4D6E1E34C70F009F6E30 /* ConvertURL.h */,
-				385C4D6F1E34C70F009F6E30 /* ConvertURL.m */,
-				385C4D701E34C70F009F6E30 /* InfoPlist.strings */,
-				385C4D721E34C70F009F6E30 /* HYXunleiLixianAPI.h */,
-				385C4D731E34C70F009F6E30 /* HYXunleiLixianAPI.m */,
-				385C4D741E34C70F009F6E30 /* JSONKit */,
-				385C4D771E34C70F009F6E30 /* Kuai.h */,
-				385C4D781E34C70F009F6E30 /* Kuai.m */,
-				385C4D791E34C70F009F6E30 /* LCHTTPConnection.h */,
-				385C4D7A1E34C70F009F6E30 /* LCHTTPConnection.m */,
-				385C4D7B1E34C70F009F6E30 /* md5.h */,
-				385C4D7C1E34C70F009F6E30 /* md5.m */,
-				385C4D7D1E34C70F009F6E30 /* NSData+Base64.h */,
-				385C4D7E1E34C70F009F6E30 /* NSData+Base64.m */,
-				385C4D7F1E34C70F009F6E30 /* NSString+Base64.h */,
-				385C4D801E34C70F009F6E30 /* NSString+Base64.m */,
-				385C4D811E34C70F009F6E30 /* NSString+RE.h */,
-				385C4D821E34C70F009F6E30 /* NSString+RE.m */,
-				385C4D831E34C70F009F6E30 /* ParseElements.h */,
-				385C4D841E34C70F009F6E30 /* ParseElements.m */,
-				385C4D851E34C70F009F6E30 /* TondarAPI-Info.plist */,
-				385C4D861E34C70F009F6E30 /* TondarAPI-Prefix.pch */,
-				385C4D871E34C70F009F6E30 /* URlEncode.h */,
-				385C4D881E34C70F009F6E30 /* URlEncode.m */,
-				385C4D891E34C70F009F6E30 /* XunleiItemInfo.h */,
-				385C4D8A1E34C70F009F6E30 /* XunleiItemInfo.m */,
-			);
-			path = TondarAPI;
-			sourceTree = "<group>";
-		};
-		385C4D741E34C70F009F6E30 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				385C4D751E34C70F009F6E30 /* JSONKit.h */,
-				385C4D761E34C70F009F6E30 /* JSONKit.m */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,9 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				380145671E1DFD34003DDB63 /* LaunchScreen.storyboard in Resources */,
-				385C4D8C1E34C70F009F6E30 /* InfoPlist.strings in Resources */,
 				380145641E1DFD34003DDB63 /* Assets.xcassets in Resources */,
-				385C4D961E34C70F009F6E30 /* TondarAPI-Info.plist in Resources */,
 				380145621E1DFD34003DDB63 /* Main.storyboard in Resources */,
 				38D869991E23884D00C42A35 /* MagnetsCell.xib in Resources */,
 				380145961E1E01D8003DDB63 /* DriverCell.xib in Resources */,
@@ -655,27 +569,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				385C4D931E34C70F009F6E30 /* NSString+Base64.m in Sources */,
-				385C4D901E34C70F009F6E30 /* LCHTTPConnection.m in Sources */,
-				385C4D971E34C70F009F6E30 /* URlEncode.m in Sources */,
 				3801455F1E1DFD34003DDB63 /* ViewController.swift in Sources */,
 				3847CB781E1FC8D2001AE1CD /* BaseNavigationController.swift in Sources */,
 				380145951E1E01D8003DDB63 /* DriverCell.swift in Sources */,
-				385C4D921E34C70F009F6E30 /* NSData+Base64.m in Sources */,
-				385C4D951E34C70F009F6E30 /* ParseElements.m in Sources */,
-				385C4D8B1E34C70F009F6E30 /* ConvertURL.m in Sources */,
 				3895EAA11E1FCB0000C3D8C3 /* TorrentViewController.swift in Sources */,
-				385C4D911E34C70F009F6E30 /* md5.m in Sources */,
 				3801455D1E1DFD34003DDB63 /* AppDelegate.swift in Sources */,
-				385C4D8E1E34C70F009F6E30 /* JSONKit.m in Sources */,
 				381920701E1FCDB00092FFD7 /* BaseViewController.swift in Sources */,
-				385C4D8D1E34C70F009F6E30 /* HYXunleiLixianAPI.m in Sources */,
-				385C4D981E34C70F009F6E30 /* XunleiItemInfo.m in Sources */,
 				382C90771E1F49B20010170E /* TorrentApi.swift in Sources */,
 				38D869981E23884D00C42A35 /* MagnetsCell.swift in Sources */,
-				385C4D8F1E34C70F009F6E30 /* Kuai.m in Sources */,
 				382C90791E1F4AFF0010170E /* Torrent.swift in Sources */,
-				385C4D941E34C70F009F6E30 /* NSString+RE.m in Sources */,
 				382C907B1E1F4F850010170E /* TorrentApiProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,14 +628,6 @@
 				380145661E1DFD34003DDB63 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		385C4D701E34C70F009F6E30 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				385C4D711E34C70F009F6E30 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
