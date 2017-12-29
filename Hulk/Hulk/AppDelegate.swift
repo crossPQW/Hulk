@@ -19,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let str = RLMRealmConfiguration.default().fileURL
         print(String(describing: str))
-        
-        var b = "bbbbb"
         return true
     }
 
