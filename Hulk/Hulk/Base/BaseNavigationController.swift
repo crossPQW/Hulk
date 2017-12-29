@@ -14,9 +14,6 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var a = ""
-        var b = ""
-        var c = ""
     }
 
     
